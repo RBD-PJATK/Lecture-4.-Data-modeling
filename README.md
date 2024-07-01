@@ -1,10 +1,6 @@
 # Lecture 4. Data modeling
 
-<h2 align="center">Lecture 4</h2>
-
-<h2 align="center"><i>Data modeling</i></h2>
-
-<hr><h3>Abstract</h3>
+<h3>Abstract</h3>
 
 <p>Lecture 4 consists of four parts.</p>
 
@@ -37,7 +33,7 @@ determined by the CASE tool used by the project team.</p>
 "Database -&gt; Options -&gt; Document :: Symbol set = IDEF1X" (instead of default
 "Relational").</p>
 
-<p align="center"><img border="0" src="images/4_3.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_3.png"></p>
 
 <ul>
 <li>Solid line = identifying relationship
@@ -51,7 +47,7 @@ determined by the CASE tool used by the project team.</p>
 model many-many relationships directly, but this feature is not available directly
 in MS Visio.  You can simulate such a relationship by the item "Dynamic connector".</p>
 
-<p align="center"><img border="0" src="images/4_10.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_10.png"></p>
 
 <table><tr><td class="przyk">
 A <i>person</i> can work on many <i>projects</i>.  A <i>project</i> is conducted
@@ -75,7 +71,7 @@ If you want to use Chen's notation in Visio, use option
 &quot;File -&gt; New -&gt; Database -&gt; Chen ERD&quot; instead of
 &quot;File -&gt; New-&gt; Database -&gt; Database Model Diagram&quot;.</p>
 
-<p align="center"><img border="0" src="images/4_9.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_9.png"></p>
 
 <table><tr><td class="przyk">A person participates in a projects in a role.</td></tr></table>
 
@@ -101,7 +97,7 @@ departments (it is an attribute of the entity <i>Department</i>). When you defin
 you have to specify the join condition for tables participating in the view.</p>
 
 
-<p align="center"><img border="0" src="images/4_1.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_1.png"></p>
 
 <p>The second example shows view <i>ProductOrder</i> with products ordered by customers.
 It contains two attributes: <i>Customer name</i> (an attribute of entity <i>Customer</i>)
@@ -113,7 +109,7 @@ through entities <i>Order</i> and <i>Line item</i>, and stops at entity <i>Produ
 This example shows that the definition of a view can include other entities than those
 that provide attributes for the view.</p>
 
-<p align="center"><img border="0" src="images/4_2.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_2.png"></p>
 
 <p>When you generate this model in MS Access, 
 you will get a select query for each view.
@@ -137,7 +133,7 @@ sub-entities fall into one of entities <i>Designer</i>, <i>Analyst</i>
 and <i>Secretary</i>.
 </td></tr></table>
 
-<p align="center"><img border="0" src="images/4_5.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_5.png"></p>
 
 <p>The attribute <i>Job</i> is called <i>the discriminator</i> because it indicates to which
 sub-entity belongs an instance of the entity <i>Person</i>.  This categorization has been designated to
@@ -145,7 +141,7 @@ be <i>complete</i>, i.e. every person belongs to one subcategory.</p>
 
 <p>Here is the full tool for the option "Entity Relationship" in MS Visio:
 
-<p align="center"><img border="0" src="images/4_4.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_4.png"></p>
 
 <p>A category relationship can be replaced by a set of one-to-one relationships between
 the super-entity and each of the the sub-entities. During lecture 3 we presented three
@@ -161,7 +157,7 @@ to implement a category relationship:
 MS Visio generates an Access database with the first method, i.e. separate tables are
 created for the super-entity and all the sub-entities:
 
-<p align="center"><img border="0" src="images/4_6.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_6.png"></p>
 
 <p><table><tr><td class="notec">As an exercise build a categorization of flying
 objects.  What properties are common? What properties are specific?
@@ -173,13 +169,13 @@ objects.  What properties are common? What properties are specific?
 <p>One of the most frequent patterns of data models are <i>hierarchies</i>.
 For example let us consider the structure of a company:</p>
 
-<p align="center"><img border="0" src="images/4_15.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_15.png"></p>
 
 <p>There is an alternative way to model it.  All units of the company can be instances of one
 entity.  The link to the master unit becomes the recursive relationship around this only
 entity.</p>
 
-<p align="center"><img border="0" src="images/4_14.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_14.png"></p>
 
 <p>This model is simpler and more flexible. When the structure of the company changes, there
 will be no need to change the schema of the database. Note that the recursive relationship
@@ -192,7 +188,7 @@ reach the <i>root of the hierarchy</i>.</p>
 the integrity checks for this attribute we can introduce a so called <i>dictionary entity</i>.
 On the diagram below <i>UnitType</i> is a dictionary entity.</p>
 
-<p align="center"><img border="0" src="images/4_16.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_16.png"></p>
 
 <table><tr><td class="notec">
 The set of the components of a car constitutes a hierarchy based on the containment
@@ -206,7 +202,7 @@ time.  The question is how to include the aspect of time in the data model.
 We are not only interested in the current salary, job and department of an
 employee but we want to know also his/her prevoius salaries, jobs and departments.</p>
 
-<p align="center"><img border="0" src="../wyklad03/images/3_5.png"></p>
+<p align="center"><img border="0" src="../wyklad03/https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/3_5.png"></p>
 
 <p>In such cases we employ the same technique that was used to handle
 many-many relationships.  We add a so called <i>temporal entity</i> that
@@ -221,7 +217,7 @@ be an element of the primary key. Perhaps you will want to create another
 attribute <i>To</i> which is to store the time when the value becomes
 invalid.</p>
 
-<p align="center"><img border="0" src="images/4_112.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_112.png"></p>
 
 <p>Now we are going to solve the problem how to enrich
 the data model so that it contains the history of employees' assignments to departments
@@ -232,7 +228,7 @@ We add a new dependent entity <i>AssigmentHist</i>
 element of the primary key.  As before, you may want to create another attribute
 <i>To</i> that is to store the time when the assignment becomes invalid.</p>
 
-<p align="center"><img border="0" src="images/4_111.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_111.png"></p>
 
 <p>This way we have described the changes to attributes and relationships that
 happen in time. We can also ask whether it is reasonable to consider changes of an
@@ -247,7 +243,7 @@ employees although they are no longer customers or employees.  Here is one possi
 solution that consists in adding attribute <i>Status</i>.  It indicates whether a person
 is currently an employee of the company.</p>
 
-<p align="center"><img border="0" src="images/4_110.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_110.png"></p>
 
 <p>We could also move the data from deleted objects to separate entities that are
 a kind of historical archive of the database.  It would be reasonable especially when
@@ -296,7 +292,7 @@ a set of values, a record or a reference to another object.</p>
         </ul>
 </ul>
 
-<p align="center"><img border="0" src="images/4_7.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_7.png"></p>
 
 <p>In the current version of MS Access there are no object features.  They are
 available for example in DBMS Oracle that will be used to teach the sequel
@@ -327,7 +323,7 @@ and multiple membership.  We classify collections as follows:</p>
 
 <h4>Examples of collections of persons: Group, Line and Enrollment</h4>
 
-<p align="center"><img border="0" src="images/4_01.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_01.png"></p>
 
 <p>Using collections of the object-relational model we can easily capture
 certain phenomena we met before.  These phenomena are non-atomic attributes,
@@ -341,7 +337,7 @@ will be presented during the sequel lecture "Database systems".</p>
 <ol>
 <li><i>A group</i>:
 
-<p align="center"><img border="0" src="images/4_8.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_8.png"></p>
 
 <p>In a single group persons are unordered and do not repeat.  This uniqueness
 is enforced by the primary key that consists of <i>Empno</i> and <i>Group_id</i>.
@@ -349,7 +345,7 @@ is enforced by the primary key that consists of <i>Empno</i> and <i>Group_id</i>
 
 <li><i>A line</i>
 
-<p align="center"><img border="0" src="images/4_80.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_80.png"></p>
 
 <p>Persons in the line are ordered by the attribute <i>Position</i>.
 A person may occur many times in the same line.  If we want to forbid such
@@ -358,7 +354,7 @@ we can set a unique index on attributes <i>Line_id</i> and <i>Empno</i>.</p>
 
 <li><i>Participations</i> (a multiset)</i>
 
-<p align="center"><img border="0" src="images/4_81.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_81.png"></p>
 
 <p>In a single collection <i>Project</i> (a multiset) a person can occur more that once
 (e.g. in different roles).
@@ -568,7 +564,7 @@ One of the nodes is distinguished as <i>the root</i>.  No edge points to the roo
 whole document.  There must exist a path from to the root to each non-root node.  This
 graph need not be a tree.</p>
 
-<p align="center"><img border="0" src="images/4_200.png"></p>
+<p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_200.png"></p>
 
 <p>Nodes represent <i>objects</i>. Edge labels play two roles. Let us assume that
 there is an edge from node <i>N</i> to node <i>K</i>:
@@ -759,7 +755,7 @@ also store other aspects like the order of the members and multiple membership.
 <li><a name="exercise8">Create an object-relationship diagram by replacing
        the relationships by collections on the following diagram:</a></p>
        
-       <p align="center"><img border="0" src="images/4_112.png"> </p>
+       <p align="center"><img border="0" src="https://gakko.pjwstk.edu.pl/materialy/2398/lec/wyklad04/images/4_112.png"> </p>
 
        <p>What a kind of collection should be used?</p>
 
